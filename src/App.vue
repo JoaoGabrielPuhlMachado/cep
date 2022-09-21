@@ -18,29 +18,34 @@ export default {
 </script>
 
 <template>
-  <h1>Buscar CEP</h1>
-  <form @submit.prevent="buscar" class="formulario1">
-    <label>CEP</label>
-    <input type="text" v-model="cep" />
-    <button type="submit">Buscar</button>
-  </form>
-  <form class="formulario2">
-    <label for="rua">Rua</label>
-    <input name="rua" type="text" v-model="endereco.logradouro" />
-    <label for="numero">Numero</label>
-    <input name="numero" type="text" v-model="endereco.numero" />
-    <label for="complemento">Complemento</label>
-    <input name="complemento" type="text" v-model="endereco.complemento" />
-    <label for="bairro">Bairro</label>
-    <input name="bairro" type="text" v-model="endereco.bairro" />
-    <label for="localidade">Cidade</label>
-    <input name="cidade" type="text" v-model="endereco.localidade" />
-    <label for="uf">Estado</label>
-    <input name="estado" type="text" v-model="endereco.uf" />
-  </form>
+  <div class="formulario">
+    <h1>Buscar CEP</h1>
+    <form @submit.prevent="buscar" class="formulario1">
+      <label>CEP</label>
+      <input type="text" v-model="cep" />
+      <button type="submit">Buscar</button>
+    </form>
+    <form class="formulario2">
+      <label for="rua">Rua</label>
+      <input name="rua" type="text" v-model="endereco.logradouro" />
+      <label for="numero">Numero</label>
+      <input name="numero" type="text" v-model="endereco.numero" />
+      <label for="complemento">Complemento</label>
+      <input name="complemento" type="text" v-model="endereco.complemento" />
+      <label for="bairro">Bairro</label>
+      <input name="bairro" type="text" v-model="endereco.bairro" />
+      <label for="localidade">Cidade</label>
+      <input name="cidade" type="text" v-model="endereco.localidade" />
+      <label for="uf">Estado</label>
+      <input name="estado" type="text" v-model="endereco.uf" />
+    </form>
+  </div>
 </template>
 
 <style scoped>
+.formulario {
+  margin: 5% 45%;
+}
 .formulario1 {
   width: 200px;
   height: 80px;
@@ -55,7 +60,6 @@ export default {
 }
 input {
   border: 1px solid rgb(163, 163, 163);
-  align-self: center;
 }
 button {
   border: 1px solid rgb(163, 163, 163);
